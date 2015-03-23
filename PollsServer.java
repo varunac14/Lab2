@@ -84,6 +84,7 @@ public class PollsServer {
     public void createPoll(io.grpc.examples.polls.PollRequest request,
 				io.grpc.stub.StreamObserver<io.grpc.examples.polls.PollResponse> responseObserver)
    {
+	logger.info("Moderator Id = " + request.getModeratorId());
 	PollResponse response = PollResponse.newBuilder()
 				.setId("ABC123")
 				.build();
